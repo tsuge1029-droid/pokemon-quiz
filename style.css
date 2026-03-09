@@ -1,0 +1,79 @@
+body {
+  margin: 0;
+  font-family: sans-serif;
+}
+
+.hidden {
+  display: none;
+}
+
+.container {
+  display: flex;
+}
+
+.stats {
+  width: 120px;
+  background: #f0f0f0;
+  padding: 8px;
+  font-size: 22px;
+}
+
+.right {
+  flex: 1;
+  padding: 8px;
+}
+
+.hint {
+  background: #e8e8e8;
+  margin-bottom: 6px;
+  padding: 6px;
+}
+
+.filter {
+  margin-bottom: 8px;
+}
+
+.answer {
+  display: flex;
+  gap: 6px;
+  margin-top: 8px;
+}
+
+/* ボタンを大きくする */
+button {
+  font-size: 18px;
+  padding: 10px 16px;
+  border-radius: 8px;
+}
+
+/* スマホ用レイアウト */
+@media (max-width:600px){
+
+  .container{
+    flex-direction: column;
+  }
+
+  .stats{
+    width:100%;
+    display:grid;
+    grid-template-columns:repeat(6,1fr);
+    text-align:center;
+    font-size:18px;
+    margin-bottom:10px;
+  }
+
+  .right{
+    padding:0;
+  }
+
+  .answer input{
+    flex:1;
+    font-size:18px;
+  }
+
+  button{
+    font-size:20px;
+    padding:14px 20px;
+  }
+
+}
