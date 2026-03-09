@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ポケモン種族値クイズ</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="setting-screen" class="screen">
+  <h2>出題範囲設定</h2>
+
+  <div class="filter">
+    <label><input type="checkbox" id="filter-legendary" checked> でんせつ・まぼろしを含める</label>
+  </div>
+
+  <div class="filter">
+    <label><input type="checkbox" id="filter-mega" checked> メガを含める</label>
+  </div>
+
+  <div class="filter">
+    <label><input type="checkbox" id="filter-prevo" checked> 進化前を含める</label>
+  </div>
+  <button id="start-btn">OK</button>
+  <button id="update-btn">データ更新</button>
+
+  <div id="update-status"></div>
+</div>
+
+<div id="quiz-screen" class="screen hidden">
+  <button id="back-btn">← 戻る</button>
+
+  <div class="container">
+    <div class="stats">
+      <div>H <span id="stat-h">-</span></div>
+      <div>A <span id="stat-a">-</span></div>
+      <div>B <span id="stat-b">-</span></div>
+      <div>C <span id="stat-c">-</span></div>
+      <div>D <span id="stat-d">-</span></div>
+      <div>S <span id="stat-s">-</span></div>
+    </div>
+
+    <div class="right">
+      <div class="hint">① タイプ1 <button class="hint-btn" data-key="type1">表示</button> <span id="hint-type1"></span></div>
+      <div class="hint">② タイプ2 <button class="hint-btn" data-key="type2">表示</button> <span id="hint-type2"></span></div>
+      <div class="hint">③ とくせい1 <button class="hint-btn" data-key="ability1">表示</button> <span id="hint-ability1"></span></div>
+      <div class="hint">④ とくせい2 <button class="hint-btn" data-key="ability2">表示</button> <span id="hint-ability2"></span></div>
+      <div class="hint">⑤ とくせい3 <button class="hint-btn" data-key="ability3">表示</button> <span id="hint-ability3"></span></div>
+      <div class="hint">⑥ 初登場世代 <button class="hint-btn" data-key="generation">表示</button> <span id="hint-generation"></span></div>
+
+   <div class="answer">
+      <input id="answer-input" list="pokemon-list" placeholder="ポケモン名">
+      <datalist id="pokemon-list"></datalist>
+      <button id="answer-btn">OK</button>
+      </div>
+
+
+      <div id="result"></div>
+      <button id="show-answer-btn">正解を見る</button>
+      <button id="next-btn">次の問題</button>
+    </div>
+  </div>
+</div>
+
+<script type="module" src="app.js"></script>
+</body>
+</html>
