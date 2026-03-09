@@ -1,0 +1,40 @@
+body {
+  margin: 0;
+  font-family: sans-serif;
+}
+
+.hidden {
+  display: none;
+}
+
+.container {
+  display: flex;
+}
+
+.stats {
+  width: 120px;
+  background: #f0f0f0;
+  padding: 8px;
+  font-size: 22px;
+}
+
+.right {
+  flex: 1;
+  padding: 8px;
+}
+
+.hint {
+  background: #e8e8e8;
+  margin-bottom: 6px;
+  padding: 6px;
+}
+
+.filter {
+  margin-bottom: 8px;
+}
+
+.answer {
+  display: flex;
+  gap: 6px;
+  margin-top: 8px;
+}
