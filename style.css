@@ -1,0 +1,112 @@
+/* =========================
+   基本スタイル
+========================= */
+body {
+  margin: 0;
+  font-family: sans-serif;
+}
+
+.hidden {
+  display: none;
+}
+
+.screen {
+  padding: 16px;
+}
+
+h2 {
+  text-align: center;
+}
+
+/* =========================
+   設定画面
+========================= */
+#setting-screen .filter {
+  margin-bottom: 8px;
+}
+
+#setting-screen button {
+  font-size: 18px;
+  padding: 10px 16px;
+  border-radius: 8px;
+  margin: 4px;
+}
+
+/* =========================
+   クイズ画面
+========================= */
+#quiz-screen .container {
+  display: flex;
+}
+
+.stats {
+  width: 120px;
+  background: #f0f0f0;
+  padding: 8px;
+  font-size: 22px;
+}
+
+.right {
+  flex: 1;
+  padding: 8px;
+}
+
+.hint {
+  background: #e8e8e8;
+  margin-bottom: 6px;
+  padding: 6px;
+}
+
+.answer {
+  display: flex;
+  gap: 6px;
+  margin-top: 8px;
+}
+
+button {
+  font-size: 18px;
+  padding: 10px 16px;
+  border-radius: 8px;
+}
+
+/* =========================
+   スマホ最適化
+========================= */
+@media (max-width:600px){
+
+  /* クイズ画面内だけ縦並びに */
+  #quiz-screen .container {
+    flex-direction: column;
+  }
+
+  /* 種族値を横並びグリッドに */
+  #quiz-screen .stats {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+    text-align: center;
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+
+  #quiz-screen .right {
+    padding: 0;
+  }
+
+  /* 回答欄を使いやすく */
+  #quiz-screen .answer input {
+    flex: 1;
+    font-size: 18px;
+  }
+
+  #quiz-screen .answer button {
+    font-size: 20px;
+    padding: 14px 20px;
+  }
+
+  /* 全ボタンを押しやすく */
+  #quiz-screen button {
+    font-size: 20px;
+    padding: 14px 20px;
+  }
+}
